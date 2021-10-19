@@ -1,35 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   phonebook.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sujeon <sujeon@student.42.kr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/19 21:14:41 by sujeon            #+#    #+#             */
-/*   Updated: 2021/10/19 21:47:14 by sujeon           ###   ########.fr       */
+/*   Created: 2021/10/19 21:14:36 by sujeon            #+#    #+#             */
+/*   Updated: 2021/10/19 21:46:44 by sujeon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "phonebook.hpp"
+#ifndef PHONEBOOK_HPP
+#define PHONEBOOK_HPP
 
-int	main() {
-	Phonebook phonebook;
-	std::string input;
+#include <iostream>
+#include <string>
 
-	while (true) {
-		std::getline(std::cin, input);
-	
-		if (input == "ADD") {
-			phonebook.add_contact();
-		}
-		else if (input == "SEARCH") {
-			std::cout << input << std::endl;
-		} 
-		else if (input == "EXIT") {
-			std::cout << input << std::endl;
-			break ;
-		}
-	}
+class Phonebook
+{
+	private:
+		int			index;
+		static std::string	field[];
 
-	return 0;
-}
+	public:
+		Phonebook();
+		~Phonebook();
+		void	add_contact();
+};
+
+#endif

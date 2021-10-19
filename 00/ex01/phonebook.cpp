@@ -1,35 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   phonebook.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sujeon <sujeon@student.42.kr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/19 21:14:41 by sujeon            #+#    #+#             */
-/*   Updated: 2021/10/19 21:47:14 by sujeon           ###   ########.fr       */
+/*   Created: 2021/10/19 21:14:38 by sujeon            #+#    #+#             */
+/*   Updated: 2021/10/19 21:46:56 by sujeon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "phonebook.hpp"
 
-int	main() {
-	Phonebook phonebook;
-	std::string input;
+std::string	Phonebook::field[] = {
+		"first name",
+		"last name",
+		"nickname",
+		"phone number",
+		"darkest secret"
+	};
 
-	while (true) {
-		std::getline(std::cin, input);
-	
-		if (input == "ADD") {
-			phonebook.add_contact();
-		}
-		else if (input == "SEARCH") {
-			std::cout << input << std::endl;
-		} 
-		else if (input == "EXIT") {
-			std::cout << input << std::endl;
-			break ;
-		}
-	}
+Phonebook::Phonebook()
+{
+	this->index = 0;
+}
 
-	return 0;
+Phonebook::~Phonebook()
+{
+}
+
+void	Phonebook::add_contact()
+{
+	for (int i = 0; i < 5; i++)
+		std::cout << this->field[i] << std::endl;	
+	if (this->index == 8)
+		this->index = 0;
+	this->index++;
+	std::cout << this->index << std::endl;
 }
