@@ -1,34 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   phonebook.hpp                                      :+:      :+:    :+:   */
+/*   contact.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sujeon <sujeon@student.42.kr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/19 21:14:36 by sujeon            #+#    #+#             */
-/*   Updated: 2021/10/21 17:59:11 by sujeon           ###   ########.fr       */
+/*   Created: 2021/10/21 16:59:44 by sujeon            #+#    #+#             */
+/*   Updated: 2021/10/21 18:03:23 by sujeon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PHONEBOOK_HPP
-#define PHONEBOOK_HPP
+#ifndef CONTACT_HPP
+# define CONTACT_HPP
 
-#include <iostream>
 #include <string>
-#include "contact.hpp"
+#include <iostream>
+#include <iomanip>
 
-class Phonebook
+class Contact
 {
-	private:
-		int		index;
-		int		amount;
-		Contact	contact[8];
+	private :
+		static std::string	field[5];
+		std::string	input[5];
 
-	public:
-		Phonebook();
-		~Phonebook();
-		void	add_contact();
-		void	search_contact();
+	public :
+		Contact();
+		~Contact();
+		void	get_input();
+		void	show_list();
 };
 
 #endif

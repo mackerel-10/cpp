@@ -6,15 +6,16 @@
 /*   By: sujeon <sujeon@student.42.kr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/19 21:14:41 by sujeon            #+#    #+#             */
-/*   Updated: 2021/10/19 21:47:14 by sujeon           ###   ########.fr       */
+/*   Updated: 2021/10/21 18:00:16 by sujeon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "phonebook.hpp"
 
-int	main() {
-	Phonebook phonebook;
-	std::string input;
+int	main(void)
+{
+	Phonebook	phonebook;
+	std::string	input;
 
 	while (true) {
 		std::getline(std::cin, input);
@@ -23,12 +24,10 @@ int	main() {
 			phonebook.add_contact();
 		}
 		else if (input == "SEARCH") {
-			std::cout << input << std::endl;
+			phonebook.search_contact();
 		} 
-		else if (input == "EXIT") {
-			std::cout << input << std::endl;
-			break ;
-		}
+		else if (input == "EXIT")
+			break;
 	}
 
 	return 0;

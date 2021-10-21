@@ -6,7 +6,7 @@
 #    By: sujeon <sujeon@student.42.kr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/19 21:14:47 by sujeon            #+#    #+#              #
-#    Updated: 2021/10/19 21:14:48 by sujeon           ###   ########.fr        #
+#    Updated: 2021/10/21 17:13:29 by sujeon           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,8 +14,9 @@ C		=	clang++
 FLAG	=	-Wall -Wextra -Werror
 
 NAME	=	phonebook
-SRC		=	main.cpp	\
-			phonebook.cpp
+SRC		=	main.cpp		\
+			phonebook.cpp	\
+			contact.cpp
 OBJ		=	$(SRC:.cpp=.o)
 
 
@@ -26,10 +27,10 @@ $(NAME) : $(OBJ)
 	$(C) $(FLAG) $^ -o $@
 
 clean :
-	rm $(OBJ)
+	rm -rf $(OBJ)
 
 fclean : clean
-	rm $(NAME)
+	rm -rf $(NAME)
 
 re : fclean all
 
