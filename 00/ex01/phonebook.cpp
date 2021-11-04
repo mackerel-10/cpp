@@ -6,7 +6,7 @@
 /*   By: sujeon <sujeon@student.42.kr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/19 21:14:38 by sujeon            #+#    #+#             */
-/*   Updated: 2021/10/21 18:00:52 by sujeon           ###   ########.fr       */
+/*   Updated: 2021/11/04 18:05:46 by sujeon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,12 +36,27 @@ void	Phonebook::add_contact()
 	std::cout << this->index << std::endl;
 }
 
+std::string	Phonebook::search_col[4] = {
+	"index",
+	"first name",
+	"last name",
+	"nickname"
+};
+
 void	Phonebook::search_contact()
 {
-	for (int i = 0; i < this->amount; i++)
+	for (int index = 0; index < 4; index++)
 	{
-		std::cout << "[" << i << "] ";
-		this->contact[i].show_list();
+		std::cout << std::setfill (' ') << std::setw (10) << this->search_col[index];
+		std::cout << "|";
+	}
+	std::cout << std::endl;
+
+	for (int index = 0; index < this->amount; index++)
+	{
+		std::cout << std::setfill (' ') << std::setw (10);
+		std::cout << index << "|";
+		this->contact[index].show_list();
 		std::cout << std::endl;
 	}
 }

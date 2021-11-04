@@ -6,7 +6,7 @@
 /*   By: sujeon <sujeon@student.42.kr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/19 21:14:36 by sujeon            #+#    #+#             */
-/*   Updated: 2021/10/21 17:59:11 by sujeon           ###   ########.fr       */
+/*   Updated: 2021/11/04 18:03:47 by sujeon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ class Phonebook
 		int		index;
 		int		amount;
 		Contact	contact[8];
+		static std::string search_col[4];
 
 	public:
 		Phonebook();
