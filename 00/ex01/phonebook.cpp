@@ -6,7 +6,7 @@
 /*   By: sujeon <sujeon@student.42.kr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/19 21:14:38 by sujeon            #+#    #+#             */
-/*   Updated: 2021/11/05 20:50:32 by sujeon           ###   ########.fr       */
+/*   Updated: 2021/11/05 21:11:32 by sujeon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,6 +68,7 @@ void	Phonebook::search_contact()
 	{
 		std::cout << "Error: Wrong index" << std::endl;
 		std::cin.clear();
+		std::cin.ignore(10000, '\n');
 		return;
 	}
 	if (0 <= selected && selected < this->amount)
