@@ -6,7 +6,7 @@
 /*   By: sujeon <sujeon@student.42.kr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/21 16:59:44 by sujeon            #+#    #+#             */
-/*   Updated: 2021/10/21 18:03:23 by sujeon           ###   ########.fr       */
+/*   Updated: 2021/11/05 19:54:27 by sujeon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,8 @@ class Contact
 		Contact();
 		~Contact();
 		void	get_input();
-		void	show_list();
+		void	search_list();
+		void	selected_index();
 };
 
 #endif
