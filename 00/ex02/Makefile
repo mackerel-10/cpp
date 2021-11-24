@@ -6,14 +6,14 @@
 #    By: sujeon <sujeon@student.42.kr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/05 21:13:26 by sujeon            #+#    #+#              #
-#    Updated: 2021/11/08 16:08:52 by sujeon           ###   ########.fr        #
+#    Updated: 2021/11/24 20:02:34 by sujeon           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 C		=	clang++
-FLAG	=	-Wall -Wextra -Werror
+FLAG	=	-Wall -Wextra -Werror -std=c++98
 
-NAME	=	phonebook
+NAME	=	test
 SRC		=	tests.cpp	\
 			Account.cpp
 OBJ		=	$(SRC:.cpp=.o)
