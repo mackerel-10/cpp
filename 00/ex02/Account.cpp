@@ -6,7 +6,7 @@
 /*   By: sujeon <sujeon@student.42.kr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/05 21:22:50 by sujeon            #+#    #+#             */
-/*   Updated: 2021/11/25 01:42:45 by sujeon           ###   ########.fr       */
+/*   Updated: 2021/11/25 01:48:46 by sujeon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -162,6 +162,6 @@ void	Account::_displayTimestamp(void)
 
 	time(&time_now);
 	strftime(buff, 16, "%Y%m%d_%H%M%S", localtime(&time_now));
-	// std::cout << "[" << buff << "]" << " ";
-	std::cout << "[19920104_091532] ";
+	std::cout << "[" << buff << "]" << " ";
+	// std::cout << "[19920104_091532] ";
 }
