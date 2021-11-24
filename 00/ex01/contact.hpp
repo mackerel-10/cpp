@@ -6,7 +6,7 @@
 /*   By: sujeon <sujeon@student.42.kr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/21 16:59:44 by sujeon            #+#    #+#             */
-/*   Updated: 2021/11/05 19:54:27 by sujeon           ###   ########.fr       */
+/*   Updated: 2021/11/24 20:48:01 by sujeon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ class Contact
 {
 	private :
 		static std::string	field[5];
-		std::string	input[5];
+		std::string			input[5];
 
 	public :
 		Contact();
