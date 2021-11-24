@@ -6,7 +6,7 @@
 /*   By: sujeon <sujeon@student.42.kr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/19 21:14:38 by sujeon            #+#    #+#             */
-/*   Updated: 2021/11/05 21:11:32 by sujeon           ###   ########.fr       */
+/*   Updated: 2021/11/25 01:45:26 by sujeon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,8 @@ std::string	Phonebook::col[6] = {
 Phonebook::Phonebook()
 {
 	// 생성자
-	this->index = 0;
-	this->amount = 0;
+	index = 0;
+	amount = 0;
 }
 
 Phonebook::~Phonebook()
@@ -33,14 +33,14 @@ Phonebook::~Phonebook()
 
 void	Phonebook::add_contact()
 {
-	std::cout << "index [" << this->index << "]" << std::endl;
-	this->contact[this->index].get_input();
-	if (this->index == 7)
-		this->index = 0;
+	std::cout << "index [" << index << "]" << std::endl;
+	contact[index].get_input();
+	if (index == 7)
+		index = 0;
 	else
-		this->index++;
-	if (this->amount < 8)
-		this->amount++;
+		index++;
+	if (amount < 8)
+		amount++;
 }
 
 void	Phonebook::search_contact()
@@ -48,15 +48,15 @@ void	Phonebook::search_contact()
 	// Show list
 	for (int idx = 0; idx < 4; idx++)
 	{
-		std::cout << std::setfill (' ') << std::setw (10) << this->col[idx];
+		std::cout << std::setfill (' ') << std::setw (10) << col[idx];
 		std::cout << "|";
 	}
 	std::cout << std::endl;
-	for (int idx = 0; idx < this->amount; idx++)
+	for (int idx = 0; idx < amount; idx++)
 	{
 		std::cout << std::setfill (' ') << std::setw (10);
 		std::cout << idx << "|";
-		this->contact[idx].search_list();
+		contact[idx].search_list();
 		std::cout << std::endl;
 	}
 
@@ -71,8 +71,8 @@ void	Phonebook::search_contact()
 		std::cin.ignore(10000, '\n');
 		return;
 	}
-	if (0 <= selected && selected < this->amount)
-		this->contact[selected].selected_index();
+	if (0 <= selected && selected < amount)
+		contact[selected].selected_index();
 	else
 		std::cout << "Error: Wrong index" << std::endl;
 }

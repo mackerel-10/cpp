@@ -6,12 +6,12 @@
 #    By: sujeon <sujeon@student.42.kr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/19 21:14:47 by sujeon            #+#    #+#              #
-#    Updated: 2021/10/21 17:13:29 by sujeon           ###   ########.fr        #
+#    Updated: 2021/11/25 01:45:47 by sujeon           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 C		=	clang++
-FLAG	=	-Wall -Wextra -Werror
+FLAG	=	-Wall -Wextra -Werror -std=c++98
 
 NAME	=	phonebook
 SRC		=	main.cpp		\
