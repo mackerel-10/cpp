@@ -41,15 +41,15 @@ bool	Replace::open_file(void)
 
 void 	Replace::replace(void)
 {
+	std::string	str;
+
 	while (!_readfile.eof())
 	{
-		std::string	str;
-
 		std::getline(_readfile, str);
 		if (!_readfile.eof())
 			str += "\n";
 		search_swap(str);
-		_replace.write(str.c_str(), str.size());
+		_replace.write(str.c_str(), str.length());
 	}
 }
 
@@ -63,7 +63,7 @@ void	Replace::search_swap(std::string &str)
 
 		src = str.substr(0, idx);
 		src += _s2;
-		src += str.substr(idx + _s1.size());
+		src += str.substr(idx + _s1.length());
 		str = src;
 	}
 }

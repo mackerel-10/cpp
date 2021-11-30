@@ -3,17 +3,18 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: sujeon <marvin@42.fr>                      +#+  +:+       +#+         #
+#    By: sujeon <sujeon@student.42seoul.kr>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2021/11/30 16:24:05 by sujeon            #+#    #+#              #
-#    Updated: 2021/11/30 16:24:07 by sujeon           ###   ########.fr        #
+#    Created: 2021/12/01 00:40:53 by sujeon            #+#    #+#              #
+#    Updated: 2021/12/01 00:40:54 by sujeon           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 C		=	clang++
 FLAG	=	-Wall -Wextra -Werror -std=c++98
-NAME	=	start
-SRC		=	main.cpp
+NAME	=	karen
+SRC		=	main.cpp	\
+			Karen.cpp
 OBJ		=	$(SRC:.cpp=.o)
 
 #################################################

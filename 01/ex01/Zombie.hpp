@@ -6,7 +6,7 @@
 /*   By: sujeon <sujeon@student.42.kr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/29 19:36:21 by sujeon            #+#    #+#             */
-/*   Updated: 2021/11/29 22:13:18 by sujeon           ###   ########.fr       */
+/*   Updated: 2021/11/29 22:27:23 by sujeon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,8 @@ class Zombie
 		Zombie();	// 기본 생성자
 		~Zombie();	// 소멸자
 		void	announce(void);
+
+		// Setter
 		void	setname(std::string name);
 };
 

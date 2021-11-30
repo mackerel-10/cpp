@@ -1,34 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Karen.hpp                                          :+:      :+:    :+:   */
+/*   Weapon.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sujeon <sujeon@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/01 00:55:02 by sujeon            #+#    #+#             */
-/*   Updated: 2021/12/01 00:55:03 by sujeon           ###   ########.fr       */
+/*   Created: 2021/11/30 17:40:39 by sujeon            #+#    #+#             */
+/*   Updated: 2021/11/30 17:40:40 by sujeon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef KAREN_HPP
-#define KAREN_HPP
+#ifndef WEAPON_HPP
+#define WEAPON_HPP
 
 #include <iostream>
 #include <string>
 
-class Karen
+class Weapon
 {
-	private:
-		void	debug( void );
-		void	info( void );
-		void	warning( void );
-		void	error( void );
-		static	std::string	level[4];
+    private:
+        std::string _type;
 
-	public:
-		Karen();
-		~Karen();
-		void	complain( std::string level );
+    public:
+		Weapon(std::string type);
+        ~Weapon();
+        const std::string	&getType();
+        void	setType(std::string type);
 };
 
 #endif

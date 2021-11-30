@@ -1,34 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Karen.hpp                                          :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sujeon <sujeon@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/01 00:55:02 by sujeon            #+#    #+#             */
-/*   Updated: 2021/12/01 00:55:03 by sujeon           ###   ########.fr       */
+/*   Created: 2021/12/01 01:08:44 by sujeon            #+#    #+#             */
+/*   Updated: 2021/12/01 01:08:45 by sujeon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef KAREN_HPP
-#define KAREN_HPP
+#include "Karen.hpp"
 
-#include <iostream>
-#include <string>
-
-class Karen
+int main(void)
 {
-	private:
-		void	debug( void );
-		void	info( void );
-		void	warning( void );
-		void	error( void );
-		static	std::string	level[4];
+	Karen	karen;
 
-	public:
-		Karen();
-		~Karen();
-		void	complain( std::string level );
-};
+	karen.complain("DEBUG");
+	karen.complain("INFO");
+	karen.complain("WARNING");
+	karen.complain("ERROR");
 
-#endif
+	// Error check
+	karen.complain("hello");
+	karen.complain("0000");
+}
