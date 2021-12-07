@@ -6,7 +6,7 @@
 /*   By: sujeon <sujeon@student.42.kr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/01 21:57:05 by sujeon            #+#    #+#             */
-/*   Updated: 2021/12/06 23:24:05 by sujeon           ###   ########.fr       */
+/*   Updated: 2021/12/07 11:43:18 by sujeon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ Fixed::Fixed(const Fixed &object){
 // assignation operator overload(할당 연산자 오버로딩)
 // 객체 = 객체
 Fixed & Fixed::operator = (const Fixed &object){
-	std::cout << "Assignation member function called" << std::endl;
+	std::cout << "Assignation operator called" << std::endl;
 	_fixed_point_value = object.getRawBits();
 	return *this;
 }

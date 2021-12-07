@@ -6,7 +6,7 @@
 /*   By: sujeon <sujeon@student.42.kr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/01 21:57:09 by sujeon            #+#    #+#             */
-/*   Updated: 2021/12/07 00:46:34 by sujeon           ###   ########.fr       */
+/*   Updated: 2021/12/07 11:22:38 by sujeon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ class Fixed
 		static const int	_fractional_bit;
 	
 	public:
+		/* ex00 */
 		// Orthodox Canonical
 		Fixed();	// default constructor(기본 생성자)
 		~Fixed();	// destructor(소멸자)
@@ -31,6 +32,14 @@ class Fixed
 
 		int getRawBits(void) const;
 		void setRawBits(int const raw);
+
+		/* ex01 */
+		Fixed(const int value);
+		Fixed(const float value);
+		float	toFloat(void) const;
+		int		toInt(void) const;
 };
+
+std::ostream & operator << (std::ostream &os, const Fixed &src);
 
 #endif

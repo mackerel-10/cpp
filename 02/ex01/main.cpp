@@ -6,7 +6,7 @@
 /*   By: sujeon <sujeon@student.42.kr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/07 00:21:16 by sujeon            #+#    #+#             */
-/*   Updated: 2021/12/07 00:46:01 by sujeon           ###   ########.fr       */
+/*   Updated: 2021/12/07 12:13:34 by sujeon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,10 @@ int	main( void )
 {
 	Fixed a;
 	Fixed const	b( 10 );
-	Fixed const	c( 42.42f );
+	Fixed const	c( 42.42f );	// 42.4219
 	Fixed const	d( b );
 
-	a = Fixed( 1234.4321f );
+	a = Fixed( 1234.4321f );	// 1234.43
 	
 	std::cout << "a is " << a << std::endl;
 	std::cout << "b is " << b << std::endl;
