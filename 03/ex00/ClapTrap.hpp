@@ -6,7 +6,7 @@
 /*   By: sujeon <sujeon@student.42.kr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/08 16:47:58 by sujeon            #+#    #+#             */
-/*   Updated: 2021/12/08 17:44:32 by sujeon           ###   ########.fr       */
+/*   Updated: 2021/12/08 23:46:54 by sujeon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,6 @@ class ClapTrap {
 		void	beRepaired(unsigned int amount);
 
 		int		getdamage(void);
-		void	died(void);
 };
 
 #endif
