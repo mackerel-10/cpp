@@ -16,5 +16,4 @@
 ### Exercise
 - Exercise 00: My First Orthodox Class
 - Exercise 01: Towards a more useful fixed point class
-- Exercise 02
-- Exercise 03
+- Exercise 02: Now we’re talking

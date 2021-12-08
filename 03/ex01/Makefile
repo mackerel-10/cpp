@@ -5,19 +5,18 @@
 #                                                     +:+ +:+         +:+      #
 #    By: sujeon <sujeon@student.42.kr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2021/11/30 17:41:08 by sujeon            #+#    #+#              #
-#    Updated: 2021/12/08 18:31:56 by sujeon           ###   ########.fr        #
+#    Created: 2021/12/08 18:55:42 by sujeon            #+#    #+#              #
+#    Updated: 2021/12/08 18:59:21 by sujeon           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 C		=	clang++
 FLAG	=	-Wall -Wextra -Werror -std=c++98
-NAME	=	start
-SRC		=	main.cpp	\
-			Weapon.cpp	\
-			HumanA.cpp	\
-			HumanB.cpp
-OBJ		=	$(SRC:.cpp=.o)
+NAME	=	claptrap
+SRC		=	main.cpp		\
+			ClapTrap.cpp	\
+			ScavTrap.cpp
+OBJ		=	%(SRC:.cpp=.o)
 
 ################################################################################
 # 									COMMAND 								   #
