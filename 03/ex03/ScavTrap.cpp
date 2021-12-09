@@ -6,7 +6,7 @@
 /*   By: sujeon <sujeon@student.42.kr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/08 18:59:44 by sujeon            #+#    #+#             */
-/*   Updated: 2021/12/09 01:21:40 by sujeon           ###   ########.fr       */
+/*   Updated: 2021/12/09 21:56:34 by sujeon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,14 +15,16 @@
 /* Orthodox canonical */
 ScavTrap::ScavTrap(): ClapTrap() {
 	std::cout << "ScavTrap Default constructor called" << std::endl;
+	_name = "default";
 	_hitpoints = 100;
 	_energy_points = 50;
 	_attack_damage = 20;
 	_guard = false;
 }
 
-ScavTrap::ScavTrap(std::string name): ClapTrap(name) {
+ScavTrap::ScavTrap(std::string name) {
 	std::cout << "ScavTrap Constructor called" << std::endl;
+	_name = name;
 	_hitpoints = 100;
 	_energy_points = 50;
 	_attack_damage = 20;

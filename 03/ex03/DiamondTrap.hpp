@@ -1,41 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
+/*   DiamondTrap.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sujeon <sujeon@student.42.kr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/08 18:59:57 by sujeon            #+#    #+#             */
-/*   Updated: 2021/12/09 21:49:31 by sujeon           ###   ########.fr       */
+/*   Created: 2021/12/09 20:44:40 by sujeon            #+#    #+#             */
+/*   Updated: 2021/12/09 21:50:09 by sujeon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SCAVTRAP_HPP
-# define SCAVTRAP_HPP
+#ifndef DIAMONDTRAP_HPP
+#define DIAMONDTRAP_HPP
 
-#include "ClapTrap.hpp"
+#include "FragTrap.hpp"
+#include "ScavTrap.hpp"
 
-class ScavTrap: virtual public ClapTrap {
-	// ClapTrap 멤버 변수 접근 지정 private -> protected로 변경.
-	// _name, _hitpoints, _energy_points, _attack_damage
-	protected:
-		std::string		_name;
+class DiamondTrap: public FragTrap, public ScavTrap {
+	private:
+		std::string _name;
 		unsigned int	_hitpoints;
 		unsigned int	_energy_points;
 		unsigned int	_attack_damage;
 		bool			_guard;
-	
+
 	public:
-		ScavTrap();		// Default constructor
-		ScavTrap(std::string name);
-		ScavTrap(const ScavTrap & src); // Copy constructor
-		virtual ~ScavTrap();	// Destructor
-		ScavTrap & operator = (const ScavTrap & src);	// Operator overload
+		/* Orthodox Canonical */
+		DiamondTrap();
+		DiamondTrap(std::string name);
+		DiamondTrap(const DiamondTrap & src);
+		virtual ~DiamondTrap();
+		DiamondTrap & operator = (const DiamondTrap & src);
 
 		virtual void	attack(std::string const & target);
 		virtual void	guardGate(void);
+		virtual void	highFivesGuys(void);
+		void	whoAmI(void);
 
-		void	check_guard(void);
+		void	displayinfo(void);
+		
 };
 
 #endif

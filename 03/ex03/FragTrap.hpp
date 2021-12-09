@@ -6,7 +6,7 @@
 /*   By: sujeon <sujeon@student.42.kr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/09 00:37:12 by sujeon            #+#    #+#             */
-/*   Updated: 2021/12/09 00:49:07 by sujeon           ###   ########.fr       */
+/*   Updated: 2021/12/09 21:50:27 by sujeon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,17 +15,23 @@
 
 #include "ClapTrap.hpp"
 
-class FragTrap: public ClapTrap {
+class FragTrap: virtual public ClapTrap {
+	protected:
+		std::string		_name;
+		unsigned int	_hitpoints;
+		unsigned int	_energy_points;
+		unsigned int	_attack_damage;
+	
 	public:
 		/* Orthodox canonical */
 		FragTrap();	// Constructor
 		FragTrap(std::string name);
 		FragTrap(const FragTrap & src); // Copy constructor
-		~FragTrap(); // Destructor
+		virtual ~FragTrap(); // Destructor
 		FragTrap & operator = (const FragTrap & src); // Operator overloading
 
 		/* Subject */
-		void	highFivesGuys(void);
+		virtual void	highFivesGuys(void);
 };
 
 #endif

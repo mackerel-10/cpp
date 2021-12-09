@@ -6,7 +6,7 @@
 #    By: sujeon <sujeon@student.42.kr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/12/08 18:55:42 by sujeon            #+#    #+#              #
-#    Updated: 2021/12/09 00:43:32 by sujeon           ###   ########.fr        #
+#    Updated: 2021/12/09 21:02:49 by sujeon           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,8 @@ NAME	=	claptrap
 SRC		=	main.cpp		\
 			ClapTrap.cpp	\
 			ScavTrap.cpp	\
-			FragTrap.cpp			
+			FragTrap.cpp	\
+			DiamondTrap.cpp
 OBJ		=	$(SRC:.cpp=.o)
 
 ################################################################################

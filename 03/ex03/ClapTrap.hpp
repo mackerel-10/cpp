@@ -6,7 +6,7 @@
 /*   By: sujeon <sujeon@student.42.kr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/08 16:47:58 by sujeon            #+#    #+#             */
-/*   Updated: 2021/12/09 00:16:19 by sujeon           ###   ########.fr       */
+/*   Updated: 2021/12/09 21:43:48 by sujeon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,10 +28,10 @@ class ClapTrap {
 		ClapTrap(); // Default constructor
 		ClapTrap(std::string name);
 		ClapTrap(const ClapTrap & src); // Copy constructor
-		~ClapTrap(); // Destructor
+		virtual	~ClapTrap(); // Destructor
 		ClapTrap & operator = (const ClapTrap & src); // Operator overload
 
-		void	attack(std::string const & target);
+		virtual	void	attack(std::string const & target);
 		void	takeDamage(unsigned int amount);
 		void	beRepaired(unsigned int amount);
 
