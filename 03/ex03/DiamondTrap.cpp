@@ -6,7 +6,7 @@
 /*   By: sujeon <sujeon@student.42.kr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/09 20:44:22 by sujeon            #+#    #+#             */
-/*   Updated: 2021/12/09 21:57:31 by sujeon           ###   ########.fr       */
+/*   Updated: 2021/12/09 21:59:43 by sujeon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ DiamondTrap & DiamondTrap::operator = (const DiamondTrap & src) {
 	return *this;
 }
 
-// Public
+/* Public */
 void	DiamondTrap::attack(std::string const & target) {
 	ScavTrap::attack(target);
 }
