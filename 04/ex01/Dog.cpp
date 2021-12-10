@@ -22,6 +22,10 @@ Dog & Dog::operator=(const Dog &src) {
 	return *this;
 }
 
-void	Dog::makeSound(void) const {
+void	Dog::makeSound() const {
 	std::cout << "[ BARK!! ]" << std::endl;
+}
+
+Brain *Dog::getBrain() const {
+	return _brain;
 }

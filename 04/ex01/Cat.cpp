@@ -25,3 +25,7 @@ Cat & Cat::operator = (const Cat & src) {
 void Cat::makeSound() const {
 	std::cout << "[ MEOW!! ]" << std::endl;
 }
+
+Brain *Cat::getBrain() const {
+	return _brain;
+}

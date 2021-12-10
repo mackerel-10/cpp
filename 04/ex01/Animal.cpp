@@ -13,7 +13,7 @@ Animal::~Animal() {
 	std::cout << "Animal Destructor called" << std::endl;
 }
 
-const Animal & Animal::operator = (const Animal &src) {
+Animal & Animal::operator = (const Animal &src) {
 	_type = src._type;
 	return *this;
 }

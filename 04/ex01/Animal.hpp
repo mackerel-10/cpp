@@ -12,10 +12,12 @@ class Animal {
 		Animal();
 		Animal(const Animal & src);
 		virtual ~Animal();
-		const Animal & operator = (const Animal & src);
+		Animal & operator = (const Animal & src);
 
-		virtual void makeSound(void) const;
-		const std::string & getType() const;
+		virtual void	makeSound(void) const;
+		const std::string &	getType() const;
+
+		virtual Brain	*getBrain(void) const = 0;
 };
 
 #endif //ANIMAL_HPP
