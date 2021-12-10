@@ -1,2 +1,7 @@
 .vscode/
 .DS_Store
+
+# CLion
+.idea/
+cmake-build-debug/
+CMakeLists.txt
