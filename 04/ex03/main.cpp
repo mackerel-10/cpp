@@ -61,6 +61,5 @@ int main() {
 	delete ice;
 	delete cure;
 
-	while (1) ;
 	return 0;
 }
