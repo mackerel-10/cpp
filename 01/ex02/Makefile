@@ -6,13 +6,13 @@
 #    By: sujeon <sujeon@student.42.kr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/30 16:24:05 by sujeon            #+#    #+#              #
-#    Updated: 2021/12/08 18:31:45 by sujeon           ###   ########.fr        #
+#    Updated: 2021/12/13 14:24:34 by sujeon           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 C		=	clang++
 FLAG	=	-Wall -Wextra -Werror -std=c++98
-NAME	=	start
+NAME	=	zombie
 SRC		=	main.cpp
 OBJ		=	$(SRC:.cpp=.o)
 

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sujeon <sujeon@student.42seoul.kr>         +#+  +:+       +#+        */
+/*   By: sujeon <sujeon@student.42.kr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/30 17:41:26 by sujeon            #+#    #+#             */
-/*   Updated: 2021/11/30 17:41:28 by sujeon           ###   ########.fr       */
+/*   Updated: 2021/12/13 15:39:29 by sujeon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int main(void)
 	{
 		Weapon	club = Weapon("crude spiked club");
 
-		HumanA bob("Bob", club);
+		HumanA bob("Bob", club); // 참조자
 		bob.attack();
 		club.setType("some other type of club");
 		bob.attack();
@@ -27,7 +27,7 @@ int main(void)
 	{
 		Weapon	club = Weapon("crude spiked club");
 
-		HumanB jim("Jim");
+		HumanB jim("Jim"); // 포인터
 		// 무기가 없는 상태.
 		jim.attack();
 		// 무기 장착.

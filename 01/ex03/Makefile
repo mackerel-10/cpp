@@ -6,13 +6,13 @@
 #    By: sujeon <sujeon@student.42.kr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/30 17:41:08 by sujeon            #+#    #+#              #
-#    Updated: 2021/12/08 18:31:56 by sujeon           ###   ########.fr        #
+#    Updated: 2021/12/13 15:40:40 by sujeon           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 C		=	clang++
 FLAG	=	-Wall -Wextra -Werror -std=c++98
-NAME	=	start
+NAME	=	weapon
 SRC		=	main.cpp	\
 			Weapon.cpp	\
 			HumanA.cpp	\
