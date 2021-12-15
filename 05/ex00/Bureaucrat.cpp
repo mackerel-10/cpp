@@ -42,18 +42,13 @@ void Bureaucrat::decrement_grade() {
 }
 
 bool Bureaucrat::check_grade(int grade) {
-	try {
-		if (grade < 1)
-			throw GradeTooHighException();
-		else if (grade > 150)
-			throw GradeTooLowException();
-	}
-	catch (std::exception & e) {
-		std::cerr << "[ " << _name << "'s Grade is ";
-		std::cerr << e.what() << std::endl;
-		return false;
-	}
-	return true;
+	if (1 <= grade && grade <= 150)
+		return true;
+	if (grade < 1)
+		throw GradeTooHighException();
+	else if (grade > 150)
+		throw GradeTooLowException();
+	return false;
 }
 
 void Bureaucrat::setGrade(int grade) {
