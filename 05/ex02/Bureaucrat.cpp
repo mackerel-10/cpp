@@ -31,6 +31,10 @@ const int Bureaucrat::getGrade() {
 	return _grade;
 }
 
+void Bureaucrat::setGrade(int grade) {
+	_grade = grade;
+}
+
 void Bureaucrat::increment_grade() {
 	if (check_grade(_grade - 1) == true)
 		_grade--;
@@ -52,8 +56,12 @@ bool Bureaucrat::check_grade(int grade) {
 	return false;
 }
 
-void Bureaucrat::setGrade(int grade) {
-	_grade = grade;
+void Bureaucrat::signForm(Form & src) {
+	if (src.getSign() == true)
+		std::cout << _name << " signs " << src.getName() << std::endl;
+	else
+		std::cout << _name << " cannot sign " << src.getName()
+			<< " because grade isn't high enough." << std::endl;
 }
 
 /* Exception */
