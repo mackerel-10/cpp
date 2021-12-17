@@ -4,13 +4,13 @@
 //int main(int argc, char *argv[]) {
 int main() {
 	Convert convert;
-	char argv[] = "\t";
+	char argv[] = "cdfe";
 
 	try {
 //		if (argc != 2)
 //			throw Convert::InputError();
-		convert.convert_input(argv);
-		convert.print();
+		std::string src = argv;
+		convert.convert_input(src);
 	}
 	catch (std::exception & e) {
 		std::cerr << e.what() << std::endl;
