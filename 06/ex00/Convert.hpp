@@ -11,6 +11,7 @@ class Convert {
 		int _int_type;
 		float _float_type;
 		double _double_type;
+		bool _impossible_type[4];
 
 	public:
 		Convert();
@@ -21,7 +22,6 @@ class Convert {
 		void convert_input(std::string src);
 		void cast_value(std::string type);
 		void print(void);
-//		void print_extra(char* src);
 
 		class InputError: public std::exception {
 			public:

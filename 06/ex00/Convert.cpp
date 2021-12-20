@@ -6,6 +6,7 @@ Convert::Convert() {
 	_int_type = 0;
 	_float_type = 0;
 	_double_type = 0;
+	memset(_impossible_type, false, 4);
 }
 
 Convert::Convert(const Convert &src) {
@@ -21,6 +22,8 @@ Convert &Convert::operator=(const Convert &src) {
 	_int_type = src._int_type;
 	_float_type = src._float_type;
 	_double_type = src._double_type;
+	for (int i = 0; i < 4; i++)
+		_impossible_type[i] = src._impossible_type[i];
 	return *this;
 }
 
@@ -38,16 +41,39 @@ void Convert::convert_input(std::string src) {
 			if (isdigit(src[i]) == false)
 				throw ConversionImpossible();
 		}
+		std::cout << "int" << std::endl;
+		_int_type = std::stoi(src);
 		cast_value("int");
 	}
-	// float
-	else if (src.find(".") && src.find("f")) {
-		cast_value("float");
+
+	// float, double
+	else if (src.find(".") && src.find("f") != std::string::npos) {
+		int cnt_dot = 0;
+
+		for (int i = 0; i < src.length() - 1; i++) {
+			if (isdigit(src[i]) == false && src[i] != '.')
+				throw ConversionImpossible();
+			if (src[i] == '.')
+				cnt_dot++;
+		}
+		if (cnt_dot > 1)
+			throw ConversionImpossible();
+
+		// flaot
+		if (src.find("f") != std::string::npos) {
+			std::cout << "float" << std::endl;
+			_float_type = std::stof(src);
+			cast_value("float");
+		}
+
+		// double
+		else {
+			std::cout << "double" << std::endl;
+			_double_type = std::stod(src);
+			cast_value("double");
+		}
 	}
-	// double
-	else if (src.find(".")) {
-		cast_value("double");
-	}
+
 	// Exception
 	else
 		throw ConversionImpossible();
