@@ -11,7 +11,7 @@ class Convert {
 		int _int_type;
 		float _float_type;
 		double _double_type;
-		bool _impossible_type[4];
+		bool _impossible_type[4]; // char int float double
 
 	public:
 		Convert();
@@ -20,8 +20,9 @@ class Convert {
 		Convert & operator=(const Convert& src);
 
 		void convert_input(std::string src);
-		void cast_value(std::string type);
+		void cast_value(void);
 		void print(void);
+		void print_exception(std::string src);
 
 		class InputError: public std::exception {
 			public:

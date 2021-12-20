@@ -1,15 +1,14 @@
 #include <iostream>
 #include "Convert.hpp"
 
-//int main(int argc, char *argv[]) {
-int main() {
+int main(int argc, char *argv[]) {
 	Convert convert;
-	char argv[] = "2147483648";
+	std::string src;
 
 	try {
-//		if (argc != 2)
-//			throw Convert::InputError();
-		std::string src = argv;
+		if (argc != 2)
+			throw Convert::InputError();
+		src = argv[1];
 		convert.convert_input(src);
 	}
 	catch (std::exception & e) {
