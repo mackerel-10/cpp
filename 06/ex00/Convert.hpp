@@ -4,6 +4,8 @@
 #include <iostream>
 #include <cstdlib>
 #include <cctype>
+#include <limits>
+#include <string>
 
 class Convert {
 	private:
@@ -11,7 +13,7 @@ class Convert {
 		int _int_type;
 		float _float_type;
 		double _double_type;
-		bool _impossible_type[4]; // char int float double
+		bool _impossible_type[3]; // char int float double
 
 	public:
 		Convert();

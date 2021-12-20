@@ -6,7 +6,7 @@ Convert::Convert() {
 	_int_type = 0;
 	_float_type = 0;
 	_double_type = 0;
-	memset(_impossible_type, false, 4);
+	memset(_impossible_type, false, 3);
 }
 
 Convert::Convert(const Convert &src) {
@@ -22,7 +22,7 @@ Convert &Convert::operator=(const Convert &src) {
 	_int_type = src._int_type;
 	_float_type = src._float_type;
 	_double_type = src._double_type;
-	for (int i = 0; i < 4; i++)
+	for (int i = 0; i < 3; i++)
 		_impossible_type[i] = src._impossible_type[i];
 	return *this;
 }
@@ -36,11 +36,11 @@ void Convert::convert_input(std::string src) {
 		print_exception(src);
 
 	// overflow 처리하기엔 double이 범위가 넓어 기본 변환을 double로 처리.
-	else if (isalpha(src[0]) && src.length() == 1) {
+	else if (isalpha(src[0]) && src.length() == 1) { // 'c', 'a' 알파벳 형식으로 들어올 경우 처리.
 		_double_type = src[0];
 		cast_value();
 	}
-	else {
+	else { // 그 외 정수, 실수 형식 그리고 예외 처리.
 		int cnt_dot = 0;
 		int cnt_f = 0;
 
@@ -78,7 +78,11 @@ void Convert::cast_value() {
 		_int_type = static_cast<int>(_double_type);
 	else
 		_impossible_type[1] = true;
-	_float_type = static_cast<float>(_double_type);
+	if (std::numeric_limits<float>::min() <= _double_type &&
+		_double_type <= std::numeric_limits<float>::max())
+		_float_type = static_cast<float>(_double_type);
+	else
+		_impossible_type[2] = true;
 	print();
 }
 
