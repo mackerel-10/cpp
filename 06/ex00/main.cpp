@@ -4,7 +4,7 @@
 //int main(int argc, char *argv[]) {
 int main() {
 	Convert convert;
-	char argv[] = "cdfe";
+	char argv[] = "0";
 
 	try {
 //		if (argc != 2)

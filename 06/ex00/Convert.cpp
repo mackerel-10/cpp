@@ -30,13 +30,24 @@ void Convert::convert_input(std::string src) {
 	if (isalpha(src[0]) && src.length() == 1) {
 		_char_type = src[0];
 		cast_value("char");
-		print();
 	}
 
 	// int
+	else if (src.find(".") == std::string::npos) {
+		for (int i = 0; i < src.length(); i++) {
+			if (isdigit(src[i]) == false)
+				throw ConversionImpossible();
+		}
+		cast_value("int");
+	}
 	// float
+	else if (src.find(".") && src.find("f")) {
+		cast_value("float");
+	}
 	// double
-
+	else if (src.find(".")) {
+		cast_value("double");
+	}
 	// Exception
 	else
 		throw ConversionImpossible();
@@ -64,6 +75,7 @@ void Convert::cast_value(std::string type) {
 		_int_type = static_cast<int>(_double_type);
 		_float_type = static_cast<float>(_double_type);
 	}
+	print();
 }
 
 void Convert::print() {
