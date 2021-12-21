@@ -13,7 +13,7 @@ class Array {
 		Array(const Array<T> &src);
 		~Array();
 		Array<T> & operator=(const Array<T> &src);
-		T & operator[](int idx);
+		T & operator[](unsigned int idx);
 
 		int size(void);
 };
@@ -46,8 +46,6 @@ Array<T>::~Array() {
 template <typename T>
 Array<T> &Array<T>::operator=(const Array<T> &src) {
 	// 깊은 복사(Deep copy)
-	if (_size)
-		delete [] _array;
 	_array = new T(src._size);
 	for (int i = 0; i < src._size; i++)
 		_array[i] = src._array[i];
@@ -60,7 +58,7 @@ int Array<T>::size() {
 }
 
 template <typename T>
-T & Array<T>::operator[](int idx) {
+T & Array<T>::operator[](unsigned int idx) {
 	if (idx >= _size)
 		throw std::exception();
 	return _array[idx];
