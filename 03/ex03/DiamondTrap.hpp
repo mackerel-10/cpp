@@ -6,13 +6,14 @@
 /*   By: sujeon <sujeon@student.42.kr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/09 20:44:40 by sujeon            #+#    #+#             */
-/*   Updated: 2021/12/09 21:50:09 by sujeon           ###   ########.fr       */
+/*   Updated: 2021/12/22 15:21:00 by sujeon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef DIAMONDTRAP_HPP
 #define DIAMONDTRAP_HPP
 
+#include <iostream>
 #include "FragTrap.hpp"
 #include "ScavTrap.hpp"
 

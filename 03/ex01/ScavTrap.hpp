@@ -6,13 +6,14 @@
 /*   By: sujeon <sujeon@student.42.kr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/08 18:59:57 by sujeon            #+#    #+#             */
-/*   Updated: 2021/12/09 00:19:47 by sujeon           ###   ########.fr       */
+/*   Updated: 2021/12/22 15:13:55 by sujeon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef SCAVTRAP_HPP
 # define SCAVTRAP_HPP
 
+#include <iostream>
 #include "ClapTrap.hpp"
 
 class ScavTrap: public ClapTrap {

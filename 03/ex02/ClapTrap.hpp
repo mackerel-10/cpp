@@ -6,7 +6,7 @@
 /*   By: sujeon <sujeon@student.42.kr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/08 16:47:58 by sujeon            #+#    #+#             */
-/*   Updated: 2021/12/09 00:16:19 by sujeon           ###   ########.fr       */
+/*   Updated: 2021/12/22 15:18:36 by sujeon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 # define CLAPTRAP_HPP
 
 #include <iostream>
-#include <string>
 
 class ClapTrap {
 	protected:

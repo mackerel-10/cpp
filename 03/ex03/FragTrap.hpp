@@ -6,13 +6,14 @@
 /*   By: sujeon <sujeon@student.42.kr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/09 00:37:12 by sujeon            #+#    #+#             */
-/*   Updated: 2021/12/09 21:50:27 by sujeon           ###   ########.fr       */
+/*   Updated: 2021/12/22 15:21:13 by sujeon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FRAGTRAP_HPP
 # define FRAGTRAP_HPP
 
+#include <iostream>
 #include "ClapTrap.hpp"
 
 class FragTrap: virtual public ClapTrap {

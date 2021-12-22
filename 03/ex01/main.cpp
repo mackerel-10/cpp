@@ -6,10 +6,11 @@
 /*   By: sujeon <sujeon@student.42.kr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/08 19:00:14 by sujeon            #+#    #+#             */
-/*   Updated: 2021/12/09 00:22:14 by sujeon           ###   ########.fr       */
+/*   Updated: 2021/12/22 15:18:03 by sujeon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <iostream>
 #include "ClapTrap.hpp"
 #include "ScavTrap.hpp"
 
