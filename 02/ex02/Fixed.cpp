@@ -6,7 +6,7 @@
 /*   By: sujeon <sujeon@student.42.kr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/01 21:57:05 by sujeon            #+#    #+#             */
-/*   Updated: 2021/12/07 16:23:00 by sujeon           ###   ########.fr       */
+/*   Updated: 2021/12/22 14:52:17 by sujeon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -124,7 +124,7 @@ Fixed & Fixed::operator -- (){
 Fixed	Fixed::operator -- (int x){
 	Fixed tmp(*this);
 
-	_fixed_point_value--;
+	_fixed_point_value--; // 감소 이전의 객체를 반환.
 	return tmp;
 }
 
