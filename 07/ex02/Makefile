@@ -2,7 +2,6 @@ C		=	clang++
 FLAG	=	-Wall -Wextra -Werror -std=c++98
 NAME	=	ex02
 SRC		=	main.cpp
-#SRC		=	main_2.cpp
 OBJ		=	$(SRC:.cpp=.o)
 
 
