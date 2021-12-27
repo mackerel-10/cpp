@@ -22,6 +22,8 @@ Base * generate(void) {
 }
 
 // Display "A", "B" or "C" according to the real type of p.
+// 동적 캐스팅 시랲시 null pointer를 반환한다.
+// 이를 이용한 조건문
 void identify(Base* p) {
 	std::cout << "[Pointer] ";
 
@@ -38,6 +40,7 @@ void identify(Base* p) {
 }
 
 // You should never use a pointer inside this function that displays "A", "B" or "C" according to the real type of p.
+// 동적 캐스팅 실패시 예외를 throw한다.
 void identify(Base& p) {
 	std::cout << "[Reference] ";
 
