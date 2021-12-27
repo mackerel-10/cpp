@@ -30,9 +30,9 @@ Convert &Convert::operator=(const Convert &src) {
 /* Member Function */
 void Convert::convert_input(std::string src) {
 	// -inf, +inf, nan(double)
-	if ((src.find("-inf") != std::string::npos)
-		|| (src.find("+inf") != std::string::npos)
-		|| (src.find("nan") != std::string::npos))
+	if (src == "-inf" || src == "-inff" ||
+		src == "+inf" || src == "+inff" ||
+		src == "nan" || src == "nanf")
 		print_exception(src);
 
 	// overflow 처리하기엔 double이 범위가 넓어 기본 변환을 double로 처리.
@@ -78,8 +78,7 @@ void Convert::cast_value() {
 		_int_type = static_cast<int>(_double_type);
 	else
 		_impossible_type[1] = true;
-	if (std::numeric_limits<float>::min() <= _double_type &&
-		_double_type <= std::numeric_limits<float>::max())
+	if (_double_type <= std::numeric_limits<float>::max())
 		_float_type = static_cast<float>(_double_type);
 	else
 		_impossible_type[2] = true;
